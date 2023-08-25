@@ -9,16 +9,18 @@ export class CounterComponent {
 
   counter = 0;
   activeDecrease = false;
-  
-  increase(){
+
+  increase() {
     this.counter++;
   }
 
-  decrease(){
-    this.counter--;
+  decrease() {
+    if (this.counter > 0) {
+      this.counter--;
+    }
   }
 
-  inactiveDecrease(){
+  inactiveDecrease() {
     this.activeDecrease = !this.activeDecrease;
   }
 
